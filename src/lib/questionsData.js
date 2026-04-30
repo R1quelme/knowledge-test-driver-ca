@@ -364,7 +364,7 @@ const ALL_QUESTIONS = [
       "Vire à esquerda em pista dupla",
       "Curva acentuada à esquerda na estrada à frente"
     ],
-    correct: 1
+    correct: 2
   },
   {
     id: 35,
@@ -399,7 +399,7 @@ const ALL_QUESTIONS = [
       "Escorregadio quando molhado",
       "Zona de tecelagem à frente"
     ],
-    correct: 2
+    correct: 0
   },
   {
     id: 38,
@@ -417,7 +417,7 @@ const ALL_QUESTIONS = [
       "Ponto de ônibus escolar à frente",
       "Zona escolar à frente"
     ],
-    correct: 3
+    correct: 2
   },
   {
     id: 40,
@@ -461,7 +461,7 @@ const ALL_QUESTIONS = [
       "Acelere ligeiramente e, em seguida, gire o volante bruscamente para retornar à parte pavimentada da estrada",
       "Mova o veículo completamente para fora da parte pavimentada e, em seguida, volte para a parte pavimentada da estrada"
     ],
-    correct: 1
+    correct: 2
   },
   {
     id: 44,
@@ -591,7 +591,7 @@ const ALL_QUESTIONS = [
       "Não são permitidas curvas",
       "Tráfego nos dois sentidos"
     ],
-    correct: 1
+    correct: 3
   },
   {
     id: 58,
@@ -743,7 +743,7 @@ const ALL_QUESTIONS = [
       "Rodovia dividida termina",
       "Obstrução - mantenha-se à esquerda"
     ],
-    correct: 2
+    correct: 0
   },
   {
     id: 72,
@@ -767,7 +767,7 @@ const ALL_QUESTIONS = [
     id: 74,
     question: "Um motorista é obrigado a relatar todas as colisões à polícia quando pessoas forem feridas ou mortas, ou quando os danos combinados a todos os veículos ou propriedades forem maiores que:",
     options: ["$750", "$1000", "$250", "$500"],
-    correct: 0
+    correct: 1
   },
   {
     id: 75,
@@ -812,7 +812,7 @@ const ALL_QUESTIONS = [
       "Área escolar",
       "Zona de parque infantil"
     ],
-    correct: 3
+    correct: 1
   },
   {
     id: 79,
@@ -845,7 +845,7 @@ const ALL_QUESTIONS = [
       "Pare apenas quando o veículo de emergência tiver dificuldade em passar",
       "Dirija o mais próximo possível do meio-fio ou da beira da estrada à direita e pare"
     ],
-    correct: 3
+    correct: 0
   },
   {
     id: 82,
@@ -868,7 +868,7 @@ const ALL_QUESTIONS = [
       "Nenhum veículo permitido",
       "Não entre"
     ],
-    correct: 3
+    correct: 1
   },
   {
     id: 84,
@@ -913,7 +913,7 @@ const ALL_QUESTIONS = [
       "Fim da linha",
       "Marcador de perigo"
     ],
-    correct: 3
+    correct: 2
   },
   {
     id: 88,
@@ -1094,7 +1094,7 @@ const ALL_QUESTIONS = [
       "Curva direita",
       "Pista dupla à frente"
     ],
-    correct: 1
+    correct: 0
   },
   {
     id: 105,
@@ -1128,7 +1128,7 @@ const ALL_QUESTIONS = [
       "Parada de ônibus escolar designada",
       "Zona escolar"
     ],
-    correct: 3
+    correct: 1
   },
   {
     id: 108,
@@ -1162,7 +1162,7 @@ const ALL_QUESTIONS = [
       "Interseção oculta",
       "Caminhões entrando na rodovia à frente"
     ],
-    correct: 3
+    correct: 0
   },
   {
     id: 111,
