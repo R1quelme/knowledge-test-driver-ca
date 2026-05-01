@@ -1,0 +1,54 @@
+{
+  "welcome": {
+    "title": "Examen de Manejo",
+    "subtitle": "Alberta, Canada - Simulador del Examen Teorico",
+    "rule_questions": "30 preguntas de opcion multiple",
+    "rule_passing": "Necesitas 25 respuestas correctas para aprobar",
+    "rule_skip": "Puedes saltar cada pregunta una vez",
+    "rule_no_time": "Sin limite de tiempo",
+    "start": "Iniciar Examen",
+    "footer": "Preguntas basadas en la Guia del Conductor de Alberta",
+    "study_title": "Modo de Estudio Completo",
+    "study_desc": "Revisa las {{total}} preguntas sin repetir, 30 por vez. El progreso se guarda automaticamente.",
+    "study_completed": "Todas completadas!",
+    "study_progress": "{{seen}} de {{total}} preguntas estudiadas",
+    "study_next": "Proximo examen: quedan {{n}} preguntas",
+    "study_restart": "Reiniciar Ciclo",
+    "study_start": "Iniciar Estudio",
+    "study_continue": "Continuar Estudio",
+    "reset": "Reiniciar"
+  },
+  "question": {
+    "alt_sign": "Senal de transito",
+    "skip": "Saltar",
+    "continue": "Continuar"
+  },
+  "header": {
+    "progress": "Pregunta {{current}} de {{total}}",
+    "restart": "Reiniciar"
+  },
+  "dialog": {
+    "restart_title": "Reiniciar el examen?",
+    "restart_desc": "Tu progreso actual se perdera. Estas seguro?",
+    "cancel": "Cancelar",
+    "confirm_restart": "Reiniciar"
+  },
+  "results": {
+    "passed": "APROBADO",
+    "failed": "REPROBADO",
+    "score": "{{percentage}}% correcto - Minimo requerido: 25/30",
+    "correct": "Correctas",
+    "wrong": "Incorrectas",
+    "back_home": "Volver al Inicio",
+    "wrong_review": "Preguntas que respondiste mal",
+    "your_answer": "Tu respuesta",
+    "correct_answer": "Respuesta correcta"
+  },
+  "language": {
+    "label": "Idioma",
+    "pt": "Português",
+    "en": "English",
+    "es": "Español",
+    "zh": "中文"
+  }
+}

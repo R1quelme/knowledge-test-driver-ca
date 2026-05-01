@@ -1,24 +1,29 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
+import { SUPPORTED_LANGUAGE_CODES } from './languages';
 
-import ptUi from './locales/pt/ui.json';
-import ptQuestions from './locales/pt/questions.json';
-import zhUi from './locales/zh/ui.json';
-import zhQuestions from './locales/zh/questions.json';
+const uiModules = import.meta.glob('./locales/*/ui.json', { eager: true, import: 'default' });
+const questionModules = import.meta.glob('./locales/*/questions.json', { eager: true, import: 'default' });
+
+const resources = SUPPORTED_LANGUAGE_CODES.reduce((acc, code) => {
+  acc[code] = {
+    ui: uiModules[`./locales/${code}/ui.json`],
+    questions: questionModules[`./locales/${code}/questions.json`] || questionModules['./locales/pt/questions.json'],
+  };
+
+  return acc;
+}, {});
 
 i18n
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
-    fallbackLng: 'pt',
-    supportedLngs: ['pt', 'zh'],
+    fallbackLng: 'en',
+    supportedLngs: SUPPORTED_LANGUAGE_CODES,
     ns: ['ui', 'questions'],
     defaultNS: 'ui',
-    resources: {
-      pt: { ui: ptUi, questions: ptQuestions },
-      zh: { ui: zhUi, questions: zhQuestions },
-    },
+    resources,
     detection: {
       order: ['localStorage', 'navigator'],
       caches: ['localStorage'],

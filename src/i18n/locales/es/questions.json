@@ -1,0 +1,992 @@
+{
+  "q1": {
+    "question": "A menos que se indique lo contrario, ¿cuál es el límite básico de velocidad fuera de una ciudad, pueblo o villa en una carretera principal?",
+    "options": [
+      "100 km/h",
+      "90 km/h",
+      "110 km/h",
+      "80 km/h"
+    ]
+  },
+  "q2": {
+    "question": "Al retroceder un vehículo de pasajeros hacia la izquierda, el conductor debe:",
+    "options": [
+      "Mirar por el espejo retrovisor interior y hacer los ajustes de dirección necesarios",
+      "Mirar por encima del hombro derecho con miradas ocasionales hacia adelante",
+      "Mirar por encima del hombro izquierdo con miradas ocasionales hacia adelante",
+      "Sin revisar por encima del hombro, usar los espejos retrovisores interior y exteriores para obtener la mejor vista hacia atrás y a ambos lados del vehículo"
+    ]
+  },
+  "q3": {
+    "question": "Al acercarse a una intersección y enfrentar un semáforo que muestra una flecha verde para girar a la derecha y una luz roja, el conductor:",
+    "options": [
+      "Debe detenerse y esperar una luz verde antes de girar en la dirección de la flecha",
+      "Puede seguir derecho por la intersección sin detenerse",
+      "Puede avanzar cuando sea seguro, sin detenerse, en la dirección de la flecha",
+      "Puede girar a la izquierda sin detenerse"
+    ]
+  },
+  "q4": {
+    "question": "Alberta tiene un sistema de puntos de demérito en el que un conductor con licencia completa, que no sea aprendiz ni probatorio, es suspendido cuando acumula:",
+    "options": [
+      "15 puntos",
+      "8 puntos",
+      "5 puntos",
+      "12 puntos"
+    ]
+  },
+  "q5": {
+    "question": "Al adelantar a un camión grande en una carretera de doble sentido, el conductor debe:",
+    "options": [
+      "Dejar espacio adicional antes de regresar al carril",
+      "Regresar al carril cuando lo indiquen las luces del camión",
+      "Regresar al carril cuando el camión ya no sea visible en ningún espejo retrovisor",
+      "Regresar al carril después de pasar el parachoques delantero del camión"
+    ]
+  },
+  "q6": {
+    "question": "¿Qué afirmación describe mejor los pasos para girar a la derecha con luz roja?",
+    "options": [
+      "Nunca se permite girar a la derecha con luz roja",
+      "Señalizar y asegurarse de que no haya una señal que prohíba el giro, detenerse, mirar a la izquierda y a la derecha, ceder el paso y avanzar",
+      "Reducir la velocidad antes del giro, buscar ciclistas a la derecha, señalizar y avanzar",
+      "Señalizar y reducir la velocidad antes del giro, mirar a la izquierda, ceder a los vehículos y avanzar"
+    ]
+  },
+  "q7": {
+    "question": "Esta señal indica:",
+    "options": [
+      "Ruta para vehículos de más de 4500 kg",
+      "Ruta para vehículos lentos",
+      "Carril reservado para autobuses",
+      "Ruta de mercancías peligrosas"
+    ]
+  },
+  "q8": {
+    "question": "Una sola línea blanca continua entre carriles de circulación en un área urbana significa:",
+    "options": [
+      "Es una línea que separa el tráfico que viaja en direcciones opuestas",
+      "El tráfico de la derecha se mueve más rápido que el tráfico de la izquierda",
+      "No se permiten cambios de carril",
+      "Se permiten cambios de carril"
+    ]
+  },
+  "q9": {
+    "question": "Un \"carril de estacionamiento\", según se define en el Manual del Conductor de Licencia Básica, es:",
+    "options": [
+      "Un carril más cercano al bordillo donde se permite estacionar, pero no hay parquímetros",
+      "Todas estas respuestas son correctas",
+      "La parte de una carretera principal entre el borde de la carretera a la derecha de la dirección del tráfico y la línea blanca continua más cercana, que no sea la línea central, marcada en la carretera",
+      "Un carril inmediatamente junto a una fila de parquímetros en un área urbana"
+    ]
+  },
+  "q10": {
+    "question": "Revisar por encima del hombro significa:",
+    "options": [
+      "Mirar el punto ciego en la dirección en la que el conductor pretende moverse",
+      "Mirar el espejo exterior izquierdo",
+      "Mirar los espejos interior y exteriores",
+      "Mirar el espejo exterior derecho"
+    ]
+  },
+  "q11": {
+    "question": "Esta señal indica:",
+    "options": [
+      "Instalaciones fuera de carretera adelante",
+      "Resbaladizo cuando está mojado",
+      "Pavimento irregular",
+      "Desvío adelante"
+    ]
+  },
+  "q12": {
+    "question": "Una luz de control de carril con una \"X\" roja encendida significa:",
+    "options": [
+      "Prepárese para un vehículo de emergencia que circula por ese carril",
+      "Reduzca la velocidad a menos de 30 km/h",
+      "Use ese carril solo para girar a la izquierda",
+      "No se permite circular por ese carril"
+    ]
+  },
+  "q13": {
+    "question": "¿Tiene un padre el derecho de retirar un \"consentimiento parental\" dado anteriormente para una persona menor de 18 años en relación con una licencia de operador?",
+    "options": [
+      "Sí, siempre que la persona siga siendo menor de 18 años y no sea autosuficiente ni esté casada",
+      "Sí, siempre que ambos padres acepten verbalmente retirar el consentimiento en una oficina de registro",
+      "No, una vez otorgado, permanece vigente hasta que la persona cumpla 18 años",
+      "No, pero ambos padres deben firmar otro formulario de consentimiento después de la suspensión de la licencia"
+    ]
+  },
+  "q14": {
+    "question": "Esta señal indica:",
+    "options": [
+      "No entrar",
+      "Vehículos de emergencia entrando a la carretera",
+      "El carril designado está cerrado",
+      "Cruce ferroviario"
+    ]
+  },
+  "q15": {
+    "question": "Al estacionar cuesta abajo en una vía de doble sentido, el conductor debe:",
+    "options": [
+      "Girar las ruedas delanteras hacia el bordillo o el borde de la carretera y aplicar el freno de estacionamiento",
+      "Mantener las ruedas delanteras rectas y aplicar el freno de estacionamiento",
+      "Girar las ruedas delanteras alejándolas del bordillo o del borde de la carretera y aplicar el freno de estacionamiento",
+      "Aplicar solo el freno de estacionamiento"
+    ]
+  },
+  "q16": {
+    "question": "Si un conductor está siendo seguido por un vehículo que intenta adelantar en una vía de doble sentido, el conductor debe:",
+    "options": [
+      "Permanecer en el carril y moverse hacia la parte derecha del carril",
+      "Encender la señal derecha y conducir por el carril de estacionamiento",
+      "Encender la señal izquierda y permanecer en el carril",
+      "Permanecer en el carril y moverse hacia la parte izquierda del carril"
+    ]
+  },
+  "q17": {
+    "question": "El procedimiento de frenado recomendado para detener un vehículo de manera normal y suave es:",
+    "options": [
+      "Aumentar continuamente la presión del freno hasta que las ruedas se bloqueen",
+      "Aplicar presión al freno, aliviar un poco antes de que el vehículo se detenga y luego volver a aplicar suficiente presión para detenerse",
+      "Poner el vehículo en neutral y aplicar presión constante al pedal del freno hasta que el vehículo se detenga",
+      "Presionar suavemente el pedal del freno hasta que el vehículo se detenga"
+    ]
+  },
+  "q18": {
+    "question": "¿Qué afirmación describe los pasos necesarios para retroceder en línea recta?",
+    "options": [
+      "Colocar la mano izquierda en la parte superior del volante y mirar por encima del hombro derecho por la ventana trasera",
+      "Colocar la mano derecha en la parte superior del volante, mirar por encima del hombro izquierdo y usar el espejo exterior izquierdo",
+      "Colocar la mano izquierda en la parte inferior del volante y usar ambos espejos exteriores",
+      "Mantener ambas manos en el volante y usar constantemente el espejo retrovisor interior como guía"
+    ]
+  },
+  "q19": {
+    "question": "Una \"zona de entrecruzamiento\" se describe mejor como:",
+    "options": [
+      "Un lugar en una carretera donde los carriles de entrada y salida están cerca y los vehículos que reducen la velocidad para salir deben circular entre vehículos que aceleran para entrar",
+      "Un lugar donde la carretera tiene una serie de curvas que requieren que el conductor reduzca la velocidad",
+      "Un área de la carretera usada para estacionamiento de emergencia",
+      "Un área de acceso limitado en una carretera donde un conductor puede retroceder legalmente si pierde la salida"
+    ]
+  },
+  "q20": {
+    "question": "¿Cuándo se permite un giro doble en una intersección?",
+    "options": [
+      "Solo al girar de una vía de un solo sentido a una vía de un solo sentido",
+      "Siempre que haya al menos 2 carriles en la vía a la que se entra",
+      "Solo cuando lo indiquen marcas en el pavimento o señales de control de tráfico",
+      "Solo cuando la vía tenga 6 carriles o más"
+    ]
+  },
+  "q21": {
+    "question": "Al acercarse a una señal de Ceda el paso, usted debe:",
+    "options": [
+      "Ceder el derecho de paso al tráfico que no enfrenta la señal y a todos los peatones en la intersección",
+      "Siempre tocar la bocina para alertar al tráfico dentro de la intersección",
+      "Esperar que todos los demás vehículos le cedan el derecho de paso",
+      "Detenerse y avanzar después de mirar a la derecha y a la izquierda"
+    ]
+  },
+  "q22": {
+    "question": "El término \"sobrepasar\" los faros de noche significa:",
+    "options": [
+      "El conductor no puede ver claramente a 1000 metros",
+      "Las luces bajas no están ajustadas correctamente",
+      "El conductor viaja a una velocidad que no le permitiría ver un objeto a tiempo para detenerse",
+      "El conductor mantuvo los faros encendidos demasiado tiempo"
+    ]
+  },
+  "q23": {
+    "question": "Bajo el programa de Licencia de Conductor Graduada, el conductor recibirá 2 deméritos:",
+    "options": [
+      "Por tener más pasajeros que cinturones de seguridad",
+      "Por no usar el cinturón de seguridad bien ajustado",
+      "Por no usar cinturón de seguridad",
+      "Por no usar el cinturón de seguridad correctamente ajustado"
+    ]
+  },
+  "q24": {
+    "question": "Usando la regla de los 2 segundos para juzgar una distancia segura al conducir:",
+    "options": [
+      "Es más precisa en carreteras rurales que en centros urbanos",
+      "No es precisa a velocidades superiores a 100 km/h",
+      "Es precisa a cualquier velocidad",
+      "No es precisa a velocidades inferiores a 100 km/h"
+    ]
+  },
+  "q25": {
+    "question": "Esta señal indica:",
+    "options": [
+      "Tráfico entrando por la derecha",
+      "Camino sinuoso adelante",
+      "Curva a la derecha",
+      "Intersección oculta a la derecha"
+    ]
+  },
+  "q26": {
+    "question": "El conductor que se acerca a un semáforo rojo intermitente debe:",
+    "options": [
+      "Detenerse y esperar la luz verde intermitente",
+      "Reducir la velocidad y avanzar con precaución",
+      "Detenerse y avanzar solo cuando sea seguro hacerlo",
+      "Detenerse hasta que la luz cambie a verde"
+    ]
+  },
+  "q27": {
+    "question": "Esta señal indica:",
+    "options": [
+      "No entrar",
+      "Vehículos lentos adelante",
+      "Advertencia, señal de ceda el paso adelante",
+      "Advertencia, el tráfico se aproxima"
+    ]
+  },
+  "q28": {
+    "question": "Según la ley de Alberta, ¿es responsabilidad del conductor asegurarse de que todos los pasajeros menores de qué edad estén debidamente asegurados en el vehículo?",
+    "options": [
+      "18 años",
+      "24 años",
+      "21 años",
+      "16 años"
+    ]
+  },
+  "q29": {
+    "question": "Al estacionar en paralelo, las ruedas del vehículo más cercanas al bordillo deben estar dentro de qué distancia máxima?",
+    "options": [
+      "80 cm del bordillo",
+      "30 cm del bordillo",
+      "10 cm del bordillo",
+      "50 cm del bordillo"
+    ]
+  },
+  "q30": {
+    "question": "¿Quién es responsable y está legalmente obligado a reportar cualquier condición médica, cambio de salud o discapacidad física que pueda afectar la capacidad de conducir?",
+    "options": [
+      "El empleador del conductor",
+      "El conductor",
+      "El médico del conductor",
+      "La compañía de seguros del conductor"
+    ]
+  },
+  "q31": {
+    "question": "Cuando un vehículo se detiene para permitir que un peatón cruce la vía, otros vehículos que se aproximan por detrás:",
+    "options": [
+      "No deben avanzar",
+      "Pueden pasar el vehículo detenido cuando hacen contacto visual con el peatón y el peatón se detiene",
+      "No deben pasar el vehículo detenido. Es ilegal",
+      "Pueden pasar el vehículo detenido si no hay tráfico en sentido contrario que pueda impedir el adelantamiento seguro"
+    ]
+  },
+  "q32": {
+    "question": "A menos que se permita lo contrario, ¿en qué carril debe estar el conductor para girar a la izquierda desde una vía de un solo sentido?",
+    "options": [
+      "El carril central",
+      "El carril más cercano al bordillo derecho",
+      "El carril izquierdo más cercano al bordillo izquierdo",
+      "El carril a la derecha del centro"
+    ]
+  },
+  "q33": {
+    "question": "Cuando un conductor se detiene detrás de otro vehículo en el tráfico:",
+    "options": [
+      "Debe mantenerse aproximadamente a 1 metro del parachoques trasero del vehículo de adelante",
+      "Debe dejar suficiente espacio para moverse a otro carril sin retroceder",
+      "Debe mantener una distancia mínima de 10 metros del vehículo de adelante",
+      "Debe mantener suficiente espacio según lo determine la regla de los 2 segundos"
+    ]
+  },
+  "q34": {
+    "question": "Esta señal indica:",
+    "options": [
+      "Los vehículos pueden girar a la izquierda o seguir derecho",
+      "Se prohíben los giros a la izquierda",
+      "Girar a la izquierda desde doble carril",
+      "Curva cerrada a la izquierda en la carretera adelante"
+    ]
+  },
+  "q35": {
+    "question": "Esta señal indica:",
+    "options": [
+      "Ceder el derecho de paso a peatones y tráfico",
+      "Placa de vehículo de mercancías peligrosas: gas inflamable",
+      "Vehículo de movimiento lento",
+      "Advertencia, señal de ceda el paso adelante"
+    ]
+  },
+  "q36": {
+    "question": "¿Por qué no es seguro adelantar a un camión cargado con troncos que está girando?",
+    "options": [
+      "El conductor del camión necesita concentrarse totalmente en el giro y no necesita la responsabilidad adicional de un vehículo que adelanta",
+      "Los camiones cargados con troncos siguen la regla de 6 segundos para giros",
+      "Existe una zona de peligro porque los troncos que caen desde la parte más alta del camión podrían bloquear todos los carriles de una carretera durante el giro",
+      "Es ilegal hacerlo"
+    ]
+  },
+  "q37": {
+    "question": "Esta señal indica:",
+    "options": [
+      "Camino sinuoso adelante",
+      "Cambio de carril permitido",
+      "Resbaladizo cuando está mojado",
+      "Zona de entrecruzamiento adelante"
+    ]
+  },
+  "q38": {
+    "question": "Una señal de vehículo de movimiento lento debe mostrarse en la parte trasera de cualquier vehículo que normalmente viaje a velocidades inferiores a:",
+    "options": [
+      "70 km/h",
+      "50 km/h",
+      "40 km/h",
+      "60 km/h"
+    ]
+  },
+  "q39": {
+    "question": "Esta señal indica:",
+    "options": [
+      "Zona de juegos adelante",
+      "Cruce peatonal adelante",
+      "Parada de autobús escolar adelante",
+      "Zona escolar adelante"
+    ]
+  },
+  "q40": {
+    "question": "Al encontrar una procesión funeraria que cruza una intersección:",
+    "options": [
+      "Toque la bocina antes de avanzar",
+      "Avance con la procesión funeraria solo cuando haya suficiente espacio entre vehículos",
+      "Ceda el derecho de paso y no interrumpa la procesión",
+      "Parpadee las luces altas antes de avanzar"
+    ]
+  },
+  "q41": {
+    "question": "Al circular en áreas urbanas, los conductores deben observar la carretera aproximadamente:",
+    "options": [
+      "25 a 30 segundos adelante",
+      "20 a 30 segundos adelante",
+      "12 a 15 segundos adelante",
+      "1 a 6 segundos adelante"
+    ]
+  },
+  "q42": {
+    "question": "¿Puede un conductor exceder el límite de velocidad al adelantar a otro vehículo?",
+    "options": [
+      "Sí, solo en carreteras principales",
+      "No, nunca está permitido",
+      "Sí, pero no más de 10 km/h por encima del límite de velocidad",
+      "Solo al adelantar a más de un vehículo a la vez"
+    ]
+  },
+  "q43": {
+    "question": "Si los neumáticos derechos del vehículo salen de la parte pavimentada de la carretera:",
+    "options": [
+      "Aplique firmemente los frenos y contravire para volver a la parte pavimentada de la carretera",
+      "Mantenga un agarre firme del volante, suelte el acelerador y luego regrese gradualmente a la parte pavimentada de la carretera",
+      "Acelere ligeramente y luego gire bruscamente el volante para volver a la parte pavimentada de la carretera",
+      "Mueva el vehículo completamente fuera de la parte pavimentada y luego vuelva a la parte pavimentada de la carretera"
+    ]
+  },
+  "q44": {
+    "question": "En el Manual del Conductor de Licencia Básica, \"noche\" se define como el período de tiempo:",
+    "options": [
+      "Que comienza 1 hora antes del atardecer y termina 1 hora después del siguiente amanecer",
+      "Que comienza al atardecer y termina al siguiente amanecer",
+      "Que comienza 1 hora después del atardecer y termina 1 hora antes del siguiente amanecer",
+      "Entre las 19:00 y las 07:00"
+    ]
+  },
+  "q45": {
+    "question": "Un carril de desaceleración es:",
+    "options": [
+      "Un carril donde los vehículos reducen la velocidad al salir de una carretera",
+      "El carril derecho de una carretera de cuatro carriles para uso de vehículos más lentos",
+      "Un carril en colinas para uso de vehículos más lentos",
+      "El carril inmediatamente a la derecha de una línea amarilla continua en una carretera"
+    ]
+  },
+  "q46": {
+    "question": "Esta señal indica:",
+    "options": [
+      "Zona escolar",
+      "Cruce escolar adelante",
+      "Zona de juegos",
+      "Luces activadas por peatones adelante"
+    ]
+  },
+  "q47": {
+    "question": "Al completar un estacionamiento en ángulo, la rueda delantera del vehículo debe estar dentro de qué distancia máxima del bordillo más cercano?",
+    "options": [
+      "100 cm",
+      "50 cm",
+      "25 cm",
+      "75 cm"
+    ]
+  },
+  "q48": {
+    "question": "Según el Manual del Conductor de Licencia Básica, la mayoría de los derrapes son resultado de:",
+    "options": [
+      "Error del conductor",
+      "Neumáticos en mal estado",
+      "Frenos en mal estado",
+      "Carreteras heladas"
+    ]
+  },
+  "q49": {
+    "question": "En una señal de pare, el conductor debe:",
+    "options": [
+      "Detenerse en una posición donde la visibilidad sea mayor",
+      "Detenerse 10 metros antes de un cruce peatonal marcado o línea de detención",
+      "Detenerse sobre el cruce peatonal marcado o la línea de detención",
+      "Detenerse antes de entrar en un cruce peatonal marcado o cruzar una línea de detención"
+    ]
+  },
+  "q50": {
+    "question": "¿Qué significa un semáforo amarillo intermitente?",
+    "options": [
+      "Avance con precaución",
+      "El semáforo cambiará a verde",
+      "Deténgase hasta que la luz deje de parpadear",
+      "El semáforo cambiará a rojo"
+    ]
+  },
+  "q51": {
+    "question": "¿Qué tan cerca puede estacionar legalmente un conductor un vehículo de una señal de pare?",
+    "options": [
+      "1.5 metros",
+      "5 metros",
+      "10 metros",
+      "3 metros"
+    ]
+  },
+  "q52": {
+    "question": "Antes de salir de un espacio de estacionamiento paralelo a la derecha de una carretera:",
+    "options": [
+      "Revise por encima del hombro hacia la derecha",
+      "Encienda la señal derecha",
+      "Revise por encima del hombro hacia la izquierda",
+      "Use una señal de brazo hacia afuera y hacia arriba"
+    ]
+  },
+  "q53": {
+    "question": "Al seguir a un vehículo de emergencia con las luces o sirena activadas, mantenga una distancia mínima de:",
+    "options": [
+      "100 metros",
+      "75 metros",
+      "125 metros",
+      "150 metros"
+    ]
+  },
+  "q54": {
+    "question": "Un vehículo que sale de un estacionamiento hacia una carretera:",
+    "options": [
+      "Debe detenerse solo si hay una señal de pare",
+      "No necesita detenerse",
+      "Debe detenerse antes de cruzar la acera solo si hay peatones presentes",
+      "Debe detenerse completamente"
+    ]
+  },
+  "q55": {
+    "question": "En un área urbana, cuando un peatón está parado en un cruce peatonal con el brazo levantado aproximadamente en ángulo recto con el cuerpo y apuntando hacia el bordillo opuesto, ¿qué significa?",
+    "options": [
+      "Los conductores deben detenerse y ceder el paso al peatón",
+      "El peatón tiene discapacidad visual y necesita ayuda para cruzar la vía",
+      "Los conductores no necesitan ceder al peatón hasta que salga del bordillo",
+      "Los conductores deben reducir la velocidad a 30 km/h y tener cuidado al pasar al peatón"
+    ]
+  },
+  "q56": {
+    "question": "¿A qué distancia mínima deben bajarse las luces de los faros por la noche al acercarse a otro vehículo por detrás?",
+    "options": [
+      "60 metros",
+      "300 metros",
+      "150 metros",
+      "100 metros"
+    ]
+  },
+  "q57": {
+    "question": "En el programa de Licencia de Conductor Graduada, un aprendiz con licencia Clase 7 es suspendido cuando acumula:",
+    "options": [
+      "15 deméritos",
+      "12 deméritos",
+      "8 deméritos",
+      "7 deméritos"
+    ]
+  },
+  "q58": {
+    "question": "Las señales de límite de velocidad indican:",
+    "options": [
+      "La velocidad a la que debe viajar bajo todas las condiciones de conducción",
+      "La velocidad mínima permitida en todas las carreteras",
+      "La velocidad máxima permitida cuando las condiciones son favorables",
+      "La velocidad máxima permitida, excepto al adelantar"
+    ]
+  },
+  "q59": {
+    "question": "Una \"intersección no controlada\":",
+    "options": [
+      "Tiene una luz amarilla intermitente para una dirección del tráfico y una luz roja intermitente para la otra dirección",
+      "Tiene señales de tráfico, pero no luces de control de tráfico",
+      "No tiene semáforos de control de tráfico ni señales de tráfico",
+      "Tiene señales de Ceda el paso, pero no señales de Pare"
+    ]
+  },
+  "q60": {
+    "question": "Al enfrentar una señal de incorporación, el conductor debe:",
+    "options": [
+      "Detenerse en la entrada de la otra carretera y esperar hasta que haya una brecha en el tráfico antes de avanzar",
+      "Buscar una brecha en el tráfico de la carretera a la que entra, igualar la velocidad de la carretera en el carril de aceleración e incorporarse suavemente",
+      "Detenerse y ceder el derecho de paso al tráfico que ya está en la carretera",
+      "Reducir la velocidad y avanzar con precaución"
+    ]
+  },
+  "q61": {
+    "question": "En visibilidad reducida debido a niebla, humo o nieve, use:",
+    "options": [
+      "Luces de estacionamiento",
+      "Faros altos",
+      "Faros bajos",
+      "Luces diurnas"
+    ]
+  },
+  "q62": {
+    "question": "Esta señal indica:",
+    "options": [
+      "Camino sinuoso adelante",
+      "Intersección en T",
+      "La carretera se estrecha a la derecha",
+      "Tráfico incorporándose"
+    ]
+  },
+  "q63": {
+    "question": "Cuando dos vehículos se aproximan a una intersección en \"T\" no controlada en ángulos rectos aproximadamente al mismo tiempo:",
+    "options": [
+      "El vehículo de la izquierda debe ceder el derecho de paso",
+      "El vehículo de la izquierda tiene el derecho de paso",
+      "El vehículo que va derecho siempre tiene el derecho de paso",
+      "Ambos vehículos deben detenerse"
+    ]
+  },
+  "q64": {
+    "question": "¿Puede un conductor girar a la derecha en un semáforo rojo?",
+    "options": [
+      "Sí, pero solo cuando una señal permite dicho giro",
+      "Sí, si el conductor reduce la velocidad y no hay tráfico ni peatones en la intersección y no hay señal que prohíba el giro",
+      "Sí, si el conductor se detiene y no hay tráfico, peatones ni señal que prohíba el giro",
+      "No, nunca se permiten giros a la derecha con luz roja"
+    ]
+  },
+  "q65": {
+    "question": "El límite de velocidad en una zona de construcción debe obedecerse:",
+    "options": [
+      "Solo durante el día",
+      "En todo momento",
+      "Solo cuando hay una persona con bandera cerca",
+      "Solo cuando los trabajadores de construcción están presentes"
+    ]
+  },
+  "q66": {
+    "question": "Esta señal indica:",
+    "options": [
+      "El carril está reservado para uso de los vehículos especificados",
+      "Tráfico de un solo sentido",
+      "Solo vehículos compartidos",
+      "El carril puede ser usado por vehículos de mercancías peligrosas"
+    ]
+  },
+  "q67": {
+    "question": "Cuando un apoyacabezas se levanta a la posición correcta, el centro del apoyacabezas está:",
+    "options": [
+      "Al nivel de la parte superior de la oreja",
+      "Al nivel de la parte superior de los hombros",
+      "Al nivel del cuello",
+      "Al nivel de la parte superior de la cabeza"
+    ]
+  },
+  "q68": {
+    "question": "Un carril de aceleración es:",
+    "options": [
+      "El carril izquierdo de una carretera de cuatro carriles, usado para adelantar vehículos lentos",
+      "Un carril en colinas, designado para vehículos más rápidos",
+      "Un carril en un área de incorporación usado por vehículos que entran a la carretera",
+      "Un carril con marcas de líneas discontinuas"
+    ]
+  },
+  "q69": {
+    "question": "Los giros en U en áreas urbanas no están permitidos en:",
+    "options": [
+      "Una intersección con carriles de tráfico marcados",
+      "Carreteras con mediana ajardinada",
+      "Una intersección controlada por una señal de control de tráfico",
+      "Una intersección controlada por señales de pare"
+    ]
+  },
+  "q70": {
+    "question": "Esta señal indica:",
+    "options": [
+      "La carretera se estrecha a la izquierda",
+      "Tráfico en ambos sentidos",
+      "Termina la carretera dividida",
+      "Obstrucción - manténgase a la izquierda"
+    ]
+  },
+  "q71": {
+    "question": "Esta señal indica:",
+    "options": [
+      "Bandas sonoras",
+      "Área en construcción",
+      "Bache",
+      "Termina el pavimento"
+    ]
+  },
+  "q72": {
+    "question": "Según el programa de Licencia de Conductor Graduada, ¿cuál es el tiempo mínimo que una persona debe cumplir como conductor probatorio Clase 5?",
+    "options": [
+      "6 meses",
+      "18 meses",
+      "2 años",
+      "1 año"
+    ]
+  },
+  "q73": {
+    "question": "Un conductor debe reportar todas las colisiones a la policía cuando haya personas heridas o muertas, o cuando los daños combinados a todos los vehículos o propiedades sean mayores que:",
+    "options": [
+      "$750",
+      "$1000",
+      "$250",
+      "$500"
+    ]
+  },
+  "q74": {
+    "question": "Si otro vehículo lo sigue demasiado de cerca, ¿qué debe hacer el conductor?",
+    "options": [
+      "Reducir la velocidad gradualmente y animar al otro vehículo a pasar",
+      "Presionar con fuerza el pedal del freno",
+      "Aumentar la velocidad a 10 km/h por encima del límite publicado",
+      "Activar las luces intermitentes de emergencia"
+    ]
+  },
+  "q75": {
+    "question": "Un conductor que intenta girar a la izquierda con una luz verde fija:",
+    "options": [
+      "Tiene el derecho de paso sobre el tráfico que viene en sentido contrario",
+      "Debe detenerse antes de la línea peatonal y luego avanzar",
+      "Tiene el derecho de paso sobre los peatones",
+      "No debe cruzar el camino de un vehículo que se aproxima a menos que sea seguro"
+    ]
+  },
+  "q76": {
+    "question": "Un examinador rechazará una prueba de carretera si:",
+    "options": [
+      "El vehículo tiene una capacidad de asientos superior a 7",
+      "El vehículo está registrado como vehículo agrícola",
+      "El vehículo es alquilado",
+      "El vehículo no es mecánicamente seguro"
+    ]
+  },
+  "q77": {
+    "question": "Esta señal indica:",
+    "options": [
+      "Niños jugando en un área residencial",
+      "Cruce peatonal adelante",
+      "Área escolar",
+      "Zona de juegos"
+    ]
+  },
+  "q78": {
+    "question": "Al adelantar a un camión grande en una carretera de doble sentido, el conductor debe:",
+    "options": [
+      "Regresar al carril cuando el camión ya no sea visible en ningún espejo retrovisor",
+      "Regresar al carril después de pasar el parachoques delantero del camión",
+      "Regresar al carril cuando lo indiquen las luces del camión",
+      "Dejar espacio adicional antes de regresar al carril"
+    ]
+  },
+  "q79": {
+    "question": "En un vehículo que no tiene frenos ABS, el frenado de umbral se refiere a:",
+    "options": [
+      "Aplicar una fuerza de frenado uniforme hasta justo antes de que las ruedas se bloqueen y aliviar ligeramente si se bloquean",
+      "Bombear el pedal del freno repetidamente hasta que el vehículo se detenga",
+      "Liberar la presión del pedal del freno y volver a aplicarla hasta que las ruedas se bloqueen",
+      "Aplicar suficiente fuerza al pedal del freno para bloquear las ruedas y mantenerlas bloqueadas"
+    ]
+  },
+  "q80": {
+    "question": "Cuando el vehículo del conductor es alcanzado por un vehículo de emergencia con la sirena activada, viniendo desde cualquier dirección en una vía de doble sentido, el conductor debe:",
+    "options": [
+      "Continuar a velocidad reducida y dejar suficiente espacio para que pase el vehículo de emergencia",
+      "Encender las luces intermitentes de emergencia",
+      "Detenerse solo cuando el vehículo de emergencia tenga dificultad para pasar",
+      "Conducir lo más cerca posible del bordillo o borde derecho de la carretera y detenerse"
+    ]
+  },
+  "q81": {
+    "question": "En Alberta, la ley exige usar los cinturones de seguridad:",
+    "options": [
+      "Solo al transportar pasajeros",
+      "Correctamente en todo momento",
+      "Solo al conducir a velocidades de carretera",
+      "Solo al conducir en la ciudad"
+    ]
+  },
+  "q82": {
+    "question": "Esta señal indica:",
+    "options": [
+      "Solo camiones pesados",
+      "No adelantar",
+      "No se permiten vehículos",
+      "No entrar"
+    ]
+  },
+  "q83": {
+    "question": "Un conductor que entra a una rotonda:",
+    "options": [
+      "Debe ceder al tráfico de la derecha",
+      "Debe ceder a los vehículos que están en la rotonda",
+      "Tiene el derecho de paso",
+      "Debe usar la regla de cortesía y ceder al vehículo que llegó primero"
+    ]
+  },
+  "q84": {
+    "question": "Al girar a la izquierda desde una vía de doble sentido hacia una vía de un solo sentido, ¿a qué carril debe entrar el vehículo?",
+    "options": [
+      "El carril inmediatamente a la derecha del centro",
+      "El carril más cercano al bordillo del lado izquierdo de la vía de un solo sentido",
+      "El carril central de la vía de un solo sentido",
+      "El carril derecho de la vía de un solo sentido"
+    ]
+  },
+  "q85": {
+    "question": "¿En qué dirección deben girarse las ruedas delanteras de un vehículo cuando está estacionado cuesta arriba en una vía de doble sentido con bordillo?",
+    "options": [
+      "Paralelas al bordillo",
+      "Hacia la izquierda",
+      "Rectas",
+      "Hacia la derecha"
+    ]
+  },
+  "q86": {
+    "question": "Esta señal indica:",
+    "options": [
+      "Termina el pavimento",
+      "Área en construcción",
+      "Fin de línea",
+      "Marcador de peligro"
+    ]
+  },
+  "q87": {
+    "question": "Revisar por encima del hombro significa:",
+    "options": [
+      "Mirar el espejo exterior derecho",
+      "Mirar el espejo exterior izquierdo",
+      "Mirar el punto ciego en la dirección en la que el conductor pretende moverse",
+      "Mirar los espejos interior y exteriores"
+    ]
+  },
+  "q88": {
+    "question": "Esta señal indica:",
+    "options": [
+      "Termina la carretera dividida",
+      "Comienza la carretera dividida",
+      "Obstrucción - pasar por la izquierda",
+      "Tráfico en ambos sentidos"
+    ]
+  },
+  "q89": {
+    "question": "Usando la regla de los 2 segundos para juzgar una distancia segura al conducir:",
+    "options": [
+      "No es precisa a velocidades superiores a 100 km/h",
+      "Es más precisa en carreteras rurales que en centros urbanos",
+      "No es precisa a velocidades inferiores a 30 km/h",
+      "Es precisa a cualquier velocidad"
+    ]
+  },
+  "q90": {
+    "question": "Al acercarse a una intersección con un semáforo amarillo fijo:",
+    "options": [
+      "Avance, porque el semáforo está a punto de cambiar a verde",
+      "Ceda el paso a los vehículos de la derecha",
+      "Deténgase antes de la intersección, a menos que no pueda detenerse de manera segura",
+      "Aumente la velocidad para cruzar la intersección"
+    ]
+  },
+  "q91": {
+    "question": "Una línea amarilla continua junto con una línea amarilla discontinua marcada en el centro de una carretera significa:",
+    "options": [
+      "La carretera se estrecha adelante",
+      "Si la línea continua está de su lado, se permite adelantar",
+      "Si la línea discontinua está de su lado, no se permite adelantar",
+      "Si la línea discontinua está de su lado, se permite adelantar"
+    ]
+  },
+  "q92": {
+    "question": "A las 9:00 a. m. en un día escolar, ¿cuál es la velocidad máxima permitida en una zona escolar en un área rural, a menos que se indique lo contrario?",
+    "options": [
+      "50 km/h",
+      "20 km/h",
+      "40 km/h",
+      "30 km/h"
+    ]
+  },
+  "q93": {
+    "question": "En una carretera de dos carriles, al adelantar a otros vehículos que viajan en la misma dirección, el conductor:",
+    "options": [
+      "Debe adelantar por la izquierda cuando sea seguro",
+      "Debe adelantar por la derecha cuando sea seguro",
+      "Debe viajar siempre 30 km/h más rápido que el vehículo que está adelantando",
+      "No debe salir para adelantar hasta estar a 3 metros del vehículo que va a adelantar"
+    ]
+  },
+  "q94": {
+    "question": "Se permite estacionar en un espacio reservado para personas con discapacidad:",
+    "options": [
+      "Mientras el conductor espera dentro del vehículo",
+      "Cuando el vehículo tiene la placa o permiso de identificación correspondiente",
+      "Cuando todos los demás espacios de estacionamiento están ocupados",
+      "Cuando el conductor se detiene por menos de 5 minutos"
+    ]
+  },
+  "q95": {
+    "question": "Esta señal indica:",
+    "options": [
+      "Instalaciones fuera de carretera",
+      "Servicios hospitalarios",
+      "Servicios hoteleros",
+      "Marcador de ruta principal de carretera"
+    ]
+  },
+  "q96": {
+    "question": "¿A qué distancia mínima de un hidrante debe estacionarse un vehículo?",
+    "options": [
+      "3 metros",
+      "4 metros",
+      "2 metros",
+      "5 metros"
+    ]
+  },
+  "q97": {
+    "question": "Esta señal indica:",
+    "options": [
+      "Señal de construcción, persona con bandera adelante",
+      "Señal de construcción, desvío adelante",
+      "Precaución, caída de rocas adelante",
+      "Señal de construcción, personas trabajando adelante"
+    ]
+  },
+  "q98": {
+    "question": "Al conducir en el carril derecho de una carretera, ¿qué debe hacer el conductor si otro vehículo intenta entrar desde un carril de aceleración a la derecha?",
+    "options": [
+      "Cambiar al carril izquierdo si es seguro hacerlo, o estar preparado para ajustar la velocidad",
+      "Detenerse para permitir que el otro vehículo entre",
+      "Acelerar para cerrar cualquier brecha en el flujo de tráfico",
+      "Insistir en que el otro vehículo ceda el derecho de paso"
+    ]
+  },
+  "q99": {
+    "question": "Al acercarse por detrás a un autobús escolar que muestra luces amarillas intermitentes alternadas, el conductor debe:",
+    "options": [
+      "Estar preparado para detenerse, ya que esto advierte que las luces rojas intermitentes alternadas se encenderán cuando el autobús se detenga",
+      "Detenerse inmediatamente porque el autobús escolar está subiendo o bajando estudiantes",
+      "Estar preparado para detenerse, ya que puede ser una advertencia de una colisión adelante y el flujo de tráfico se ha detenido",
+      "Tener cuidado porque el autobús escolar se acerca a un cruce ferroviario y está a punto de detenerse"
+    ]
+  },
+  "q100": {
+    "question": "A menos que se indique lo contrario, los límites de velocidad de zona escolar están vigentes en días escolares durante las siguientes horas:",
+    "options": [
+      "8:00 a. m. a 4:30 p. m.",
+      "8:30 a. m. a 9:30 a. m., 12:00 p. m. a 1:00 p. m. y 3:30 p. m. a 4:00 p. m.",
+      "8:00 a. m. a 9:30 a. m., 11:30 a. m. a 1:30 p. m. y 3:00 p. m. a 4:30 p. m.",
+      "8:30 a. m. hasta 1 hora después del atardecer"
+    ]
+  },
+  "q101": {
+    "question": "Las zonas de juegos están vigentes:",
+    "options": [
+      "Desde las 8:30 a. m. hasta 1 hora después del atardecer",
+      "Solo cuando las clases terminan al mediodía y después de las 4:30 p. m.",
+      "Durante el día y hasta las 11:00 p. m.",
+      "Desde las 8:00 a. m. hasta las 8:00 p. m."
+    ]
+  },
+  "q102": {
+    "question": "A menos que se permita lo contrario, ¿en qué carril debe estar un conductor para girar a la izquierda desde una vía de un solo sentido?",
+    "options": [
+      "El carril a la derecha del centro",
+      "El carril izquierdo más cercano al bordillo izquierdo",
+      "El carril más cercano al bordillo derecho",
+      "El carril central"
+    ]
+  },
+  "q103": {
+    "question": "Esta señal indica:",
+    "options": [
+      "Termina el carril, pérdida del carril derecho",
+      "Carril añadido (flujo libre)",
+      "Curva a la derecha",
+      "Carretera de dos carriles adelante"
+    ]
+  },
+  "q104": {
+    "question": "Según el programa de Licencia de Conductor Graduada, un aprendiz con licencia Clase 7 no tiene permitido conducir un vehículo entre las horas de:",
+    "options": [
+      "9:00 a. m. y 5:00 p. m.",
+      "Medianoche y 5:00 a. m.",
+      "10:00 p. m. y 6:00 a. m.",
+      "Medianoche y 7:00 a. m."
+    ]
+  },
+  "q105": {
+    "question": "Al acercarse a una intersección y enfrentar un semáforo que muestra una flecha verde para girar a la derecha y una luz roja, el conductor:",
+    "options": [
+      "Debe detenerse y esperar una luz verde antes de girar en la dirección de la flecha",
+      "Puede avanzar cuando sea seguro, sin detenerse, en la dirección de la flecha",
+      "Puede seguir derecho por la intersección sin detenerse",
+      "Puede girar a la izquierda sin detenerse"
+    ]
+  },
+  "q106": {
+    "question": "Esta señal indica:",
+    "options": [
+      "Zona de juegos",
+      "Cruce peatonal",
+      "Parada designada de autobús escolar",
+      "Zona escolar"
+    ]
+  },
+  "q107": {
+    "question": "Al recuperarse de un derrape, el conductor debe:",
+    "options": [
+      "Acelerar y dirigir en la dirección opuesta al derrape",
+      "Frenar y sujetar firmemente el volante",
+      "Dirigir en la dirección en la que el conductor quiere que vaya la parte delantera del vehículo",
+      "Frenar y contravirar"
+    ]
+  },
+  "q108": {
+    "question": "Al acercarse por detrás a un autobús escolar detenido que tiene activadas sus luces rojas intermitentes alternadas, el conductor debe:",
+    "options": [
+      "Tocar la bocina para alertar a cualquier peatón y pasar a baja velocidad",
+      "Detenerse detrás del autobús y esperar hasta que las luces rojas alternadas dejen de parpadear",
+      "Cambiar al carril izquierdo, reducir la velocidad a 30 km/h y pasar con precaución",
+      "Detenerse detrás del autobús, observar cuidadosamente a los peatones y, si está libre, avanzar y pasar lentamente el autobús"
+    ]
+  },
+  "q109": {
+    "question": "Esta señal indica:",
+    "options": [
+      "Intersección en T",
+      "Termina el carril de tráfico",
+      "Intersección oculta",
+      "Camiones entrando a la carretera adelante"
+    ]
+  },
+  "q110": {
+    "question": "Al acercarse a la cima de una colina en una carretera de dos carriles:",
+    "options": [
+      "Se permite exceder el límite de velocidad",
+      "Parpadear los faros para advertir a los vehículos que se aproximan",
+      "Mantenerse a la derecha del carril",
+      "Mantenerse cerca de la línea central para evitar que otros adelanten"
+    ]
+  }
+}

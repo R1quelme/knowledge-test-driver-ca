@@ -47,6 +47,8 @@
   "language": {
     "label": "语言",
     "pt": "Português",
+    "en": "English",
+    "es": "Español",
     "zh": "中文"
   }
 }

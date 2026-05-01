@@ -1,0 +1,54 @@
+{
+  "welcome": {
+    "title": "Driving Test",
+    "subtitle": "Alberta, Canada - Knowledge Test Simulator",
+    "rule_questions": "30 multiple-choice questions",
+    "rule_passing": "You need 25 correct answers to pass",
+    "rule_skip": "You can skip each question once",
+    "rule_no_time": "No time limit",
+    "start": "Start Test",
+    "footer": "Questions based on the Alberta Driver's Guide",
+    "study_title": "Complete Study Mode",
+    "study_desc": "Go through all {{total}} questions without repeats, 30 at a time. Progress is saved automatically.",
+    "study_completed": "All completed!",
+    "study_progress": "{{seen}} of {{total}} questions studied",
+    "study_next": "Next test: {{n}} questions remaining",
+    "study_restart": "Restart Cycle",
+    "study_start": "Start Study",
+    "study_continue": "Continue Study",
+    "reset": "Reset"
+  },
+  "question": {
+    "alt_sign": "Traffic sign",
+    "skip": "Skip",
+    "continue": "Continue"
+  },
+  "header": {
+    "progress": "Question {{current}} of {{total}}",
+    "restart": "Restart"
+  },
+  "dialog": {
+    "restart_title": "Restart the test?",
+    "restart_desc": "Your current progress will be lost. Are you sure?",
+    "cancel": "Cancel",
+    "confirm_restart": "Restart"
+  },
+  "results": {
+    "passed": "PASSED",
+    "failed": "FAILED",
+    "score": "{{percentage}}% correct - Minimum required: 25/30",
+    "correct": "Correct",
+    "wrong": "Wrong",
+    "back_home": "Back Home",
+    "wrong_review": "Questions you got wrong",
+    "your_answer": "Your answer",
+    "correct_answer": "Correct answer"
+  },
+  "language": {
+    "label": "Language",
+    "pt": "Português",
+    "en": "English",
+    "es": "Español",
+    "zh": "中文"
+  }
+}

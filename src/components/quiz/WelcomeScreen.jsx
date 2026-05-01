@@ -34,9 +34,7 @@ export default function WelcomeScreen({ onStart, onStartStudy }) {
       transition={{ duration: 0.5 }}
       className="max-w-lg mx-auto space-y-4"
     >
-      <div className="flex justify-end">
-        <LanguageSwitcher />
-      </div>
+      <LanguageSwitcher className="w-full" />
 
       <Card className="border-0 shadow-xl shadow-primary/10 overflow-hidden">
         <div className="h-2 bg-gradient-to-r from-primary via-primary/80 to-primary/50" />
