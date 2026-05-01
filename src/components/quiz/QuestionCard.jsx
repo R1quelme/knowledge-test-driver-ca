@@ -1,26 +1,31 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { SkipForward, CheckCircle, XCircle } from "lucide-react";
+import { SkipForward, CheckCircle, XCircle, ArrowRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 const LETTERS = ["A", "B", "C", "D"];
 
 export default function QuestionCard({ question, canSkip, onAnswer, onSkip }) {
+  const { t } = useTranslation();
   const [selected, setSelected] = useState(null);
   const [revealed, setRevealed] = useState(false);
+
+  const text = t(`q${question.id}.question`, { ns: "questions" });
+  const options = t(`q${question.id}.options`, { ns: "questions", returnObjects: true });
 
   const handleSelect = (index) => {
     if (revealed) return;
     setSelected(index);
     setRevealed(true);
+  };
 
-    setTimeout(() => {
-      onAnswer(index);
-      setSelected(null);
-      setRevealed(false);
-    }, 1200);
+  const handleContinue = () => {
+    onAnswer(selected);
+    setSelected(null);
+    setRevealed(false);
   };
 
   const isCorrect = selected === question.correct;
@@ -38,21 +43,21 @@ export default function QuestionCard({ question, canSkip, onAnswer, onSkip }) {
           <div className="h-1 bg-gradient-to-r from-primary via-primary/70 to-primary/40" />
           <CardContent className="p-6 sm:p-8">
             <h2 className="text-lg sm:text-xl font-semibold leading-relaxed text-foreground mb-4">
-              {question.question}
+              {text}
             </h2>
 
             {question.image && (
               <div className="mb-8 flex justify-center">
                 <img
                   src={question.image}
-                  alt="Sinal de trânsito"
+                  alt={t("question.alt_sign")}
                   className="max-h-48 object-contain"
                 />
               </div>
             )}
 
             <div className="space-y-3">
-              {question.options.map((option, index) => {
+              {options.map((option, index) => {
                 const isThis = selected === index;
                 const isCorrectAnswer = index === question.correct;
 
@@ -109,7 +114,16 @@ export default function QuestionCard({ question, canSkip, onAnswer, onSkip }) {
                   className="text-muted-foreground hover:text-foreground gap-2"
                 >
                   <SkipForward className="w-4 h-4" />
-                  Pular
+                  {t("question.skip")}
+                </Button>
+              </div>
+            )}
+
+            {revealed && (
+              <div className="mt-6 flex justify-end">
+                <Button onClick={handleContinue} size="lg" className="gap-2 px-8">
+                  {t("question.continue")}
+                  <ArrowRight className="w-4 h-4" />
                 </Button>
               </div>
             )}

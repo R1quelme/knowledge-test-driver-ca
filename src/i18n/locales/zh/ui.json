@@ -1,0 +1,52 @@
+{
+  "welcome": {
+    "title": "驾驶考试",
+    "subtitle": "加拿大艾伯塔省 — 笔试模拟考试",
+    "rule_questions": "30 道多项选择题",
+    "rule_passing": "需答对 25 题才能通过",
+    "rule_skip": "每题可以跳过一次",
+    "rule_no_time": "无时间限制",
+    "start": "开始考试",
+    "footer": "题目基于艾伯塔省驾驶员手册",
+    "study_title": "完整学习模式",
+    "study_desc": "完成全部 {{total}} 道题不重复,每次 30 道。进度自动保存。",
+    "study_completed": "全部完成!",
+    "study_progress": "已学习 {{seen}}/{{total}} 道题",
+    "study_next": "下次测试:剩余 {{n}} 道题",
+    "study_restart": "重新开始",
+    "study_start": "开始学习",
+    "study_continue": "继续学习",
+    "reset": "重置"
+  },
+  "question": {
+    "alt_sign": "交通标志",
+    "skip": "跳过",
+    "continue": "继续"
+  },
+  "header": {
+    "progress": "第 {{current}} 题 / 共 {{total}} 题",
+    "restart": "重新开始"
+  },
+  "dialog": {
+    "restart_title": "重新开始考试?",
+    "restart_desc": "当前进度将丢失。确定吗?",
+    "cancel": "取消",
+    "confirm_restart": "重新开始"
+  },
+  "results": {
+    "passed": "通过",
+    "failed": "未通过",
+    "score": "{{percentage}}% 正确率 — 最低要求:25/30",
+    "correct": "正确",
+    "wrong": "错误",
+    "back_home": "返回首页",
+    "wrong_review": "您答错的题目",
+    "your_answer": "您的答案",
+    "correct_answer": "正确答案"
+  },
+  "language": {
+    "label": "语言",
+    "pt": "Português",
+    "zh": "中文"
+  }
+}

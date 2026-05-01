@@ -1,0 +1,52 @@
+{
+  "welcome": {
+    "title": "Prova de Direção",
+    "subtitle": "Alberta, Canadá — Simulador de Exame Teórico",
+    "rule_questions": "30 questões de múltipla escolha",
+    "rule_passing": "Você precisa de 25 acertos para passar",
+    "rule_skip": "Você pode pular cada questão uma vez",
+    "rule_no_time": "Sem limite de tempo",
+    "start": "Iniciar Prova",
+    "footer": "Questões baseadas no Manual do Motorista de Alberta",
+    "study_title": "Modo Estudo Completo",
+    "study_desc": "Percorra todas as {{total}} questões sem repetir, 30 por vez. O progresso é salvo automaticamente.",
+    "study_completed": "Todas concluídas!",
+    "study_progress": "{{seen}} de {{total}} questões estudadas",
+    "study_next": "Próxima prova: {{n}} questões restantes",
+    "study_restart": "Recomeçar Ciclo",
+    "study_start": "Iniciar Estudo",
+    "study_continue": "Continuar Estudo",
+    "reset": "Resetar"
+  },
+  "question": {
+    "alt_sign": "Sinal de trânsito",
+    "skip": "Pular",
+    "continue": "Continuar"
+  },
+  "header": {
+    "progress": "Questão {{current}} de {{total}}",
+    "restart": "Recomeçar"
+  },
+  "dialog": {
+    "restart_title": "Recomeçar o teste?",
+    "restart_desc": "Seu progresso atual será perdido. Tem certeza?",
+    "cancel": "Cancelar",
+    "confirm_restart": "Recomeçar"
+  },
+  "results": {
+    "passed": "APROVADO",
+    "failed": "REPROVADO",
+    "score": "{{percentage}}% de acerto — Mínimo necessário: 25/30",
+    "correct": "Corretas",
+    "wrong": "Erradas",
+    "back_home": "Voltar ao Início",
+    "wrong_review": "Questões que você errou",
+    "your_answer": "Sua resposta",
+    "correct_answer": "Resposta correta"
+  },
+  "language": {
+    "label": "Idioma",
+    "pt": "Português",
+    "zh": "中文"
+  }
+}

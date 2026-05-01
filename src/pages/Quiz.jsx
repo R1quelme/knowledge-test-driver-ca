@@ -1,8 +1,8 @@
 import { useState, useCallback } from "react";
 import ALL_QUESTIONS, { getRandomQuestions } from "@/lib/questionsData";
 import WelcomeScreen from "@/components/quiz/WelcomeScreen";
-import QuizHeader from "@/components/quiz/QuizHeader";
 import QuestionCard from "@/components/quiz/QuestionCard";
+import QuizHeader from "@/components/quiz/QuizHeader";
 import ResultsScreen from "@/components/quiz/ResultsScreen";
 import { saveSeenIds } from "@/lib/studyProgress";
 
@@ -97,24 +97,6 @@ export default function Quiz() {
   return (
     <div className="min-h-screen bg-background">
       {/* Top bar */}
-      <div className="border-b bg-card/80 backdrop-blur-sm sticky top-0 z-10">
-        <div className="max-w-2xl mx-auto px-4 py-3 flex items-center justify-between">
-          <div className="flex items-center gap-2.5">
-            <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-sm">AB</span>
-            </div>
-            <span className="font-semibold text-sm tracking-tight hidden sm:block">
-              Prova de Direção — Alberta
-            </span>
-          </div>
-          {phase === "quiz" && (
-            <span className="text-xs text-muted-foreground font-medium">
-              {isStudyMode ? "📚 Modo Estudo" : "Mín. 25 de 30 para aprovação"}
-            </span>
-          )}
-        </div>
-      </div>
-
       {/* Content */}
       <div className="max-w-2xl mx-auto px-4 py-8 sm:py-12">
         {phase === "welcome" && (
@@ -129,6 +111,7 @@ export default function Quiz() {
               correct={correctCount}
               wrong={wrongCount}
               skipped={skippedInQueue}
+              onRestart={handleRestart}
             />
             <QuestionCard
               question={currentQuestion}

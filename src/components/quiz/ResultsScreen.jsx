@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -7,7 +8,59 @@ import { cn } from "@/lib/utils";
 
 const LETTERS = ["A", "B", "C", "D"];
 
+function WrongQuestionItem({ item, idx }) {
+  const { t } = useTranslation();
+  const text = t(`q${item.question.id}.question`, { ns: "questions" });
+  const options = t(`q${item.question.id}.options`, { ns: "questions", returnObjects: true });
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: idx * 0.05 }}
+    >
+      <Card className="border shadow-sm">
+        <CardContent className="p-5 sm:p-6">
+          <p className="font-medium text-sm sm:text-base leading-relaxed mb-4">
+            {text}
+          </p>
+          {item.question.image && (
+            <div className="mb-4 flex justify-center">
+              <img
+                src={item.question.image}
+                alt={t("question.alt_sign")}
+                className="max-h-32 object-contain"
+              />
+            </div>
+          )}
+          <div className="space-y-2">
+            <div className="flex items-start gap-3 p-3 rounded-lg bg-red-50 border border-red-200">
+              <XCircle className="w-4 h-4 text-red-500 mt-0.5 flex-shrink-0" />
+              <div>
+                <p className="text-xs text-red-500 font-medium mb-0.5">{t("results.your_answer")}</p>
+                <p className="text-sm text-red-700">
+                  {LETTERS[item.userAnswer]}. {options[item.userAnswer]}
+                </p>
+              </div>
+            </div>
+            <div className="flex items-start gap-3 p-3 rounded-lg bg-green-50 border border-green-200">
+              <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
+              <div>
+                <p className="text-xs text-green-500 font-medium mb-0.5">{t("results.correct_answer")}</p>
+                <p className="text-sm text-green-700">
+                  {LETTERS[item.question.correct]}. {options[item.question.correct]}
+                </p>
+              </div>
+            </div>
+          </div>
+        </CardContent>
+      </Card>
+    </motion.div>
+  );
+}
+
 export default function ResultsScreen({ correct, wrong, wrongAnswers, onRestart }) {
+  const { t } = useTranslation();
   const total = correct + wrong;
   const passed = correct >= 25;
   const percentage = Math.round((correct / total) * 100);
@@ -53,14 +106,14 @@ export default function ResultsScreen({ correct, wrong, wrongAnswers, onRestart 
               ? "bg-green-100 text-green-700 border-green-200"
               : "bg-red-100 text-red-700 border-red-200"
           )}>
-            {passed ? "APROVADO" : "REPROVADO"}
+            {passed ? t("results.passed") : t("results.failed")}
           </Badge>
 
           <h1 className="text-4xl sm:text-5xl font-bold mt-4 mb-2">
             {correct}/{total}
           </h1>
           <p className="text-muted-foreground text-lg">
-            {percentage}% de acerto — Mínimo necessário: 25/30
+            {t("results.score", { percentage })}
           </p>
 
           <div className="grid grid-cols-2 gap-4 mt-8 max-w-xs mx-auto">
@@ -69,14 +122,14 @@ export default function ResultsScreen({ correct, wrong, wrongAnswers, onRestart 
                 <CheckCircle className="w-5 h-5" />
                 <span className="text-2xl font-bold">{correct}</span>
               </div>
-              <p className="text-xs text-green-600 mt-1">Corretas</p>
+              <p className="text-xs text-green-600 mt-1">{t("results.correct")}</p>
             </div>
             <div className="bg-red-50 rounded-xl p-4">
               <div className="flex items-center justify-center gap-2 text-red-700">
                 <XCircle className="w-5 h-5" />
                 <span className="text-2xl font-bold">{wrong}</span>
               </div>
-              <p className="text-xs text-red-600 mt-1">Erradas</p>
+              <p className="text-xs text-red-600 mt-1">{t("results.wrong")}</p>
             </div>
           </div>
 
@@ -86,54 +139,20 @@ export default function ResultsScreen({ correct, wrong, wrongAnswers, onRestart 
             className="mt-8 gap-2 px-8"
           >
             <RotateCcw className="w-4 h-4" />
-            Voltar ao Início
+            {t("results.back_home")}
           </Button>
         </CardContent>
       </Card>
 
-      {/* Wrong Answers Review */}
       {wrongAnswers.length > 0 && (
         <div className="space-y-4">
           <h2 className="text-xl font-bold flex items-center gap-2">
             <XCircle className="w-5 h-5 text-red-500" />
-            Questões que você errou
+            {t("results.wrong_review")}
           </h2>
 
           {wrongAnswers.map((item, idx) => (
-            <motion.div
-              key={item.question.id}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: idx * 0.05 }}
-            >
-              <Card className="border shadow-sm">
-                <CardContent className="p-5 sm:p-6">
-                  <p className="font-medium text-sm sm:text-base leading-relaxed mb-4">
-                    {item.question.question}
-                  </p>
-                  <div className="space-y-2">
-                    <div className="flex items-start gap-3 p-3 rounded-lg bg-red-50 border border-red-200">
-                      <XCircle className="w-4 h-4 text-red-500 mt-0.5 flex-shrink-0" />
-                      <div>
-                        <p className="text-xs text-red-500 font-medium mb-0.5">Sua resposta</p>
-                        <p className="text-sm text-red-700">
-                          {LETTERS[item.userAnswer]}. {item.question.options[item.userAnswer]}
-                        </p>
-                      </div>
-                    </div>
-                    <div className="flex items-start gap-3 p-3 rounded-lg bg-green-50 border border-green-200">
-                      <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
-                      <div>
-                        <p className="text-xs text-green-500 font-medium mb-0.5">Resposta correta</p>
-                        <p className="text-sm text-green-700">
-                          {LETTERS[item.question.correct]}. {item.question.options[item.question.correct]}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </motion.div>
+            <WrongQuestionItem key={item.question.id} item={item} idx={idx} />
           ))}
         </div>
       )}

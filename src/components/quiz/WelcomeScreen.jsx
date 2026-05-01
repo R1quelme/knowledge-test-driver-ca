@@ -2,16 +2,18 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Car, CheckCircle, Clock, SkipForward, Target, BookOpen, RotateCcw } from "lucide-react";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 import { getStudyProgress, resetStudyProgress } from "@/lib/studyProgress";
+import { TOTAL_QUESTIONS_COUNT } from "@/lib/questionsData";
+import LanguageSwitcher from "@/components/quiz/LanguageSwitcher";
 import { useState } from "react";
 
-const TOTAL = 111;
-
 export default function WelcomeScreen({ onStart, onStartStudy }) {
+  const { t } = useTranslation();
   const [progress, setProgress] = useState(() => getStudyProgress());
   const seenCount = progress.seenIds.length;
-  const remaining = TOTAL - seenCount;
-  const isCompleted = seenCount >= TOTAL;
+  const remaining = TOTAL_QUESTIONS_COUNT - seenCount;
+  const isCompleted = seenCount >= TOTAL_QUESTIONS_COUNT;
 
   const handleReset = () => {
     resetStudyProgress();
@@ -19,10 +21,10 @@ export default function WelcomeScreen({ onStart, onStartStudy }) {
   };
 
   const rules = [
-    { icon: Target, text: "30 questões de múltipla escolha" },
-    { icon: CheckCircle, text: "Você precisa de 25 acertos para passar" },
-    { icon: SkipForward, text: "Você pode pular cada questão uma vez" },
-    { icon: Clock, text: "Sem limite de tempo" },
+    { icon: Target, text: t("welcome.rule_questions") },
+    { icon: CheckCircle, text: t("welcome.rule_passing") },
+    { icon: SkipForward, text: t("welcome.rule_skip") },
+    { icon: Clock, text: t("welcome.rule_no_time") },
   ];
 
   return (
@@ -32,7 +34,10 @@ export default function WelcomeScreen({ onStart, onStartStudy }) {
       transition={{ duration: 0.5 }}
       className="max-w-lg mx-auto space-y-4"
     >
-      {/* Main quiz card */}
+      <div className="flex justify-end">
+        <LanguageSwitcher />
+      </div>
+
       <Card className="border-0 shadow-xl shadow-primary/10 overflow-hidden">
         <div className="h-2 bg-gradient-to-r from-primary via-primary/80 to-primary/50" />
         <CardContent className="p-8 sm:p-10">
@@ -41,10 +46,10 @@ export default function WelcomeScreen({ onStart, onStartStudy }) {
               <Car className="w-8 h-8 text-primary" />
             </div>
             <h1 className="text-2xl sm:text-3xl font-bold tracking-tight">
-              Prova de Direção
+              {t("welcome.title")}
             </h1>
             <p className="text-muted-foreground mt-2 text-sm sm:text-base">
-              Alberta, Canadá — Simulador de Exame Teórico
+              {t("welcome.subtitle")}
             </p>
           </div>
 
@@ -70,16 +75,15 @@ export default function WelcomeScreen({ onStart, onStartStudy }) {
             size="lg"
             className="w-full text-base font-semibold h-12"
           >
-            Iniciar Prova
+            {t("welcome.start")}
           </Button>
 
           <p className="text-center text-xs text-muted-foreground mt-4">
-            Questões baseadas no Manual do Motorista de Alberta
+            {t("welcome.footer")}
           </p>
         </CardContent>
       </Card>
 
-      {/* Study All card */}
       <Card className="border-0 shadow-lg shadow-amber-500/10 overflow-hidden">
         <div className="h-2 bg-gradient-to-r from-amber-400 via-amber-500 to-orange-400" />
         <CardContent className="p-6">
@@ -88,30 +92,31 @@ export default function WelcomeScreen({ onStart, onStartStudy }) {
               <BookOpen className="w-5 h-5 text-amber-600" />
             </div>
             <div className="flex-1 min-w-0">
-              <h2 className="font-bold text-base">Modo Estudo Completo</h2>
+              <h2 className="font-bold text-base">{t("welcome.study_title")}</h2>
               <p className="text-xs text-muted-foreground mt-1 leading-relaxed">
-                Percorra todas as 111 questões sem repetir, 30 por vez. O progresso é salvo automaticamente.
+                {t("welcome.study_desc", { total: TOTAL_QUESTIONS_COUNT })}
               </p>
 
-              {/* Progress bar */}
               <div className="mt-3">
                 <div className="flex justify-between text-xs mb-1">
                   <span className="text-muted-foreground">
-                    {isCompleted ? "Todas concluídas!" : `${seenCount} de ${TOTAL} questões estudadas`}
+                    {isCompleted
+                      ? t("welcome.study_completed")
+                      : t("welcome.study_progress", { seen: seenCount, total: TOTAL_QUESTIONS_COUNT })}
                   </span>
                   <span className="font-semibold text-amber-600">
-                    {Math.round((seenCount / TOTAL) * 100)}%
+                    {Math.round((seenCount / TOTAL_QUESTIONS_COUNT) * 100)}%
                   </span>
                 </div>
                 <div className="h-2 bg-amber-100 rounded-full overflow-hidden">
                   <div
                     className="h-full bg-amber-400 rounded-full transition-all duration-500"
-                    style={{ width: `${Math.min((seenCount / TOTAL) * 100, 100)}%` }}
+                    style={{ width: `${Math.min((seenCount / TOTAL_QUESTIONS_COUNT) * 100, 100)}%` }}
                   />
                 </div>
                 {!isCompleted && seenCount > 0 && (
                   <p className="text-xs text-muted-foreground mt-1">
-                    Próxima prova: {Math.min(remaining, 30)} questões restantes
+                    {t("welcome.study_next", { n: Math.min(remaining, 30) })}
                   </p>
                 )}
               </div>
@@ -122,7 +127,11 @@ export default function WelcomeScreen({ onStart, onStartStudy }) {
                   size="sm"
                   className="flex-1 bg-amber-500 hover:bg-amber-600 text-white font-semibold"
                 >
-                  {isCompleted ? "Recomeçar Ciclo" : seenCount === 0 ? "Iniciar Estudo" : "Continuar Estudo"}
+                  {isCompleted
+                    ? t("welcome.study_restart")
+                    : seenCount === 0
+                      ? t("welcome.study_start")
+                      : t("welcome.study_continue")}
                 </Button>
                 {seenCount > 0 && (
                   <Button
@@ -132,7 +141,7 @@ export default function WelcomeScreen({ onStart, onStartStudy }) {
                     className="gap-1.5 text-muted-foreground"
                   >
                     <RotateCcw className="w-3.5 h-3.5" />
-                    Resetar
+                    {t("welcome.reset")}
                   </Button>
                 )}
               </div>
