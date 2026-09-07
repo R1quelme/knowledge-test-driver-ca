@@ -31,6 +31,11 @@
     "plugins": [
       "expo-router",
       "expo-localization"
-    ]
+    ],
+    "extra": {
+      "_comment": "Test Store keys — replace with the real goog_/appl_ keys before shipping. See PREMIUM_SETUP.md.",
+      "revenuecatAndroidKey": "test_jaSETbQLYsxXTHrPzbcsNrjOEOP",
+      "revenuecatIosKey": "test_jaSETbQLYsxXTHrPzbcsNrjOEOP"
+    }
   }
 }

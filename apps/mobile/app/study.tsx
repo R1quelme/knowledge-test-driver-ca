@@ -7,13 +7,19 @@ import { getStudyProgress } from "../src/lib/studyProgress";
 import { QuizHeader } from "../src/components/quiz/QuizHeader";
 import { QuestionCard } from "../src/components/quiz/QuestionCard";
 import { ResultsScreen } from "../src/components/quiz/ResultsScreen";
+import { usePremium } from "../src/lib/premium";
 
 export default function StudyScreen() {
   const [batch, setBatch] = useState<Question[] | null>(null);
+  const { ready, isPremium } = usePremium();
 
   useEffect(() => {
+    if (ready && !isPremium) {
+      router.replace("/");
+      return;
+    }
     getStudyProgress().then((p) => setBatch(getStudyBatch(p.seenIds)));
-  }, []);
+  }, [ready, isPremium]);
 
   if (!batch) {
     return (

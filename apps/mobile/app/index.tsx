@@ -1,8 +1,8 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import { ScrollView, View, Text, Pressable, Image } from "react-native";
 import Animated, { FadeInLeft, FadeInUp } from "react-native-reanimated";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
-import { router } from "expo-router";
+import { router, useFocusEffect } from "expo-router";
 import { useTranslation } from "react-i18next";
 import {
   CheckCircle,
@@ -11,34 +11,72 @@ import {
   Target,
   BookOpen,
   RotateCcw,
+  Lock,
+  Crown,
 } from "lucide-react-native";
 import { TOTAL_QUESTIONS_COUNT } from "@driver-quiz/content";
 import { fs, s } from "../src/lib/scale";
 import { Card, CardContent } from "../src/components/ui/Card";
 import { Button } from "../src/components/ui/Button";
 import { LanguageSwitcher } from "../src/components/LanguageSwitcher";
+import { Paywall } from "../src/components/Paywall";
 import {
   getStudyProgress,
   resetStudyProgress,
 } from "../src/lib/studyProgress";
+import { usePremium } from "../src/lib/premium";
+import { getRemainingToday, DAILY_LIMIT } from "../src/lib/dailyAttempts";
 
 export default function WelcomeScreen() {
   const { t } = useTranslation();
   const insets = useSafeAreaInsets();
   const [seenIds, setSeenIds] = useState<number[]>([]);
+  const [remaining, setRemaining] = useState<number>(DAILY_LIMIT);
+  const [paywall, setPaywall] = useState<null | "study" | "daily_limit">(null);
+  const { isPremium } = usePremium();
+
+  const refreshRemaining = useCallback(() => {
+    getRemainingToday().then(setRemaining);
+  }, []);
 
   useEffect(() => {
     getStudyProgress().then((p) => setSeenIds(p.seenIds));
-  }, []);
+    refreshRemaining();
+  }, [refreshRemaining]);
+
+  useFocusEffect(
+    useCallback(() => {
+      getStudyProgress().then((p) => setSeenIds(p.seenIds));
+      refreshRemaining();
+    }, [refreshRemaining]),
+  );
 
   const seenCount = seenIds.length;
-  const remaining = TOTAL_QUESTIONS_COUNT - seenCount;
+  const studyRemaining = TOTAL_QUESTIONS_COUNT - seenCount;
   const isCompleted = seenCount >= TOTAL_QUESTIONS_COUNT;
   const progressPct = Math.min((seenCount / TOTAL_QUESTIONS_COUNT) * 100, 100);
 
   const handleReset = async () => {
     await resetStudyProgress();
     setSeenIds([]);
+  };
+
+  // Shows the paywall without navigating; the quiz screen enforces the limit
+  // for real and is what actually spends the attempt.
+  const handleStartQuiz = () => {
+    if (!isPremium && remaining <= 0) {
+      setPaywall("daily_limit");
+      return;
+    }
+    router.push("/quiz");
+  };
+
+  const handleStartStudy = () => {
+    if (!isPremium) {
+      setPaywall("study");
+      return;
+    }
+    router.push("/study");
   };
 
   const rules = [
@@ -64,6 +102,17 @@ export default function WelcomeScreen() {
         <Animated.View entering={FadeInUp.duration(450)}>
           <Card>
             <View className="h-2 bg-brand-700" />
+            {isPremium && (
+              <View
+                className="absolute flex-row items-center bg-amber-100 border border-amber-300 rounded-full px-2 py-1"
+                style={{ top: s(12), right: s(12), gap: 4, zIndex: 1 }}
+              >
+                <Crown size={s(11)} color="#d97706" />
+                <Text className="text-amber-700 font-bold" style={{ fontSize: fs(10) }}>
+                  {t("welcome.premium_active")}
+                </Text>
+              </View>
+            )}
             <CardContent className="p-8">
               <View className="items-center mb-6">
                 <View className="rounded-2xl overflow-hidden mb-4" style={{ width: s(100), height: s(100) }}>
@@ -98,11 +147,25 @@ export default function WelcomeScreen() {
                 ))}
               </View>
 
+              {!isPremium && (
+                <View className="bg-gray-100 rounded-xl px-3 py-2 mb-3 flex-row items-center justify-center" style={{ gap: 6 }}>
+                  <Text className="text-gray-600" style={{ fontSize: fs(13) }}>
+                    {remaining > 0
+                      ? t("welcome.attempts_remaining", { n: remaining, total: DAILY_LIMIT })
+                      : t("welcome.attempts_none")}
+                  </Text>
+                </View>
+              )}
+
               <Button
-                label={t("welcome.start")}
+                label={
+                  !isPremium && remaining <= 0
+                    ? t("welcome.daily_limit_cta")
+                    : t("welcome.start")
+                }
                 variant="primary"
                 size="lg"
-                onPress={() => router.push("/quiz")}
+                onPress={handleStartQuiz}
               />
 
               <Text className="text-center text-gray-500 mt-4" style={{ fontSize: fs(13) }}>
@@ -121,9 +184,19 @@ export default function WelcomeScreen() {
                   <BookOpen size={s(24)} color="#d97706" />
                 </View>
                 <View className="flex-1">
-                  <Text className="font-bold text-gray-900" style={{ fontSize: fs(17) }}>
-                    {t("welcome.study_title")}
-                  </Text>
+                  <View className="flex-row items-center" style={{ gap: 6 }}>
+                    <Text className="font-bold text-gray-900" style={{ fontSize: fs(17) }}>
+                      {t("welcome.study_title")}
+                    </Text>
+                    {!isPremium && (
+                      <View className="bg-amber-100 rounded-full px-2 py-0.5 flex-row items-center" style={{ gap: 3 }}>
+                        <Crown size={s(11)} color="#d97706" />
+                        <Text className="text-amber-700 font-bold" style={{ fontSize: fs(10) }}>
+                          {t("welcome.premium_badge")}
+                        </Text>
+                      </View>
+                    )}
+                  </View>
                   <Text className="text-gray-500 mt-1" style={{ fontSize: fs(13), lineHeight: fs(20) }}>
                     {t("welcome.study_desc", { total: TOTAL_QUESTIONS_COUNT })}
                   </Text>
@@ -151,7 +224,7 @@ export default function WelcomeScreen() {
                     {!isCompleted && seenCount > 0 && (
                       <Text className="text-gray-500 mt-1" style={{ fontSize: fs(13) }}>
                         {t("welcome.study_next", {
-                          n: Math.min(remaining, 30),
+                          n: Math.min(studyRemaining, 30),
                         })}
                       </Text>
                     )}
@@ -160,19 +233,23 @@ export default function WelcomeScreen() {
                   <View className="flex-row gap-2 mt-4">
                     <View className="flex-1">
                       <Pressable
-                        onPress={() => router.push("/study")}
-                        className="bg-amber-500 active:bg-amber-600 rounded-xl px-4 py-3.5 items-center"
+                        onPress={handleStartStudy}
+                        className="bg-amber-500 active:bg-amber-600 rounded-xl px-4 py-3.5 flex-row items-center justify-center"
+                        style={{ gap: 6 }}
                       >
+                        {!isPremium && <Lock size={s(15)} color="#fff" />}
                         <Text className="text-white font-semibold" style={{ fontSize: fs(15) }}>
-                          {isCompleted
-                            ? t("welcome.study_restart")
-                            : seenCount === 0
-                              ? t("welcome.study_start")
-                              : t("welcome.study_continue")}
+                          {!isPremium
+                            ? t("welcome.study_unlock")
+                            : isCompleted
+                              ? t("welcome.study_restart")
+                              : seenCount === 0
+                                ? t("welcome.study_start")
+                                : t("welcome.study_continue")}
                         </Text>
                       </Pressable>
                     </View>
-                    {seenCount > 0 && (
+                    {seenCount > 0 && isPremium && (
                       <Pressable
                         onPress={handleReset}
                         className="border border-gray-300 active:bg-gray-100 rounded-xl px-4 py-3.5 flex-row items-center gap-1.5"
@@ -190,6 +267,12 @@ export default function WelcomeScreen() {
           </Card>
         </Animated.View>
       </ScrollView>
+
+      <Paywall
+        visible={paywall !== null}
+        onClose={() => setPaywall(null)}
+        reason={paywall ?? undefined}
+      />
     </View>
   );
 }
