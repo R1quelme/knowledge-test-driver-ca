@@ -1,8 +1,16 @@
 import { useEffect, useState, useCallback } from "react";
-import { ScrollView, View, Text, Pressable, Image } from "react-native";
+import {
+  ScrollView,
+  View,
+  Text,
+  Pressable,
+  Image,
+  ActivityIndicator,
+  Alert,
+} from "react-native";
 import Animated, { FadeInLeft, FadeInUp } from "react-native-reanimated";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
-import { router, useFocusEffect } from "expo-router";
+import { router, useFocusEffect, useLocalSearchParams } from "expo-router";
 import { useTranslation } from "react-i18next";
 import {
   CheckCircle,
@@ -33,7 +41,18 @@ export default function WelcomeScreen() {
   const [seenIds, setSeenIds] = useState<number[]>([]);
   const [remaining, setRemaining] = useState<number>(DAILY_LIMIT);
   const [paywall, setPaywall] = useState<null | "study" | "daily_limit">(null);
-  const { isPremium } = usePremium();
+  const { isPremium, restore } = usePremium();
+  const params = useLocalSearchParams<{ paywall?: string }>();
+  const [restoring, setRestoring] = useState(false);
+
+  // The quiz screen redirects here with ?paywall=daily_limit when it turns
+  // someone away, so the bounce arrives with an explanation.
+  useEffect(() => {
+    if (params.paywall === "daily_limit") {
+      setPaywall("daily_limit");
+      router.setParams({ paywall: undefined });
+    }
+  }, [params.paywall]);
 
   const refreshRemaining = useCallback(() => {
     getRemainingToday().then(setRemaining);
@@ -77,6 +96,20 @@ export default function WelcomeScreen() {
       return;
     }
     router.push("/study");
+  };
+
+  const handleRestore = async () => {
+    setRestoring(true);
+    const ok = await restore();
+    setRestoring(false);
+    if (ok) {
+      Alert.alert(t("paywall.restore_ok_title"), t("paywall.restore_ok_desc"));
+    } else {
+      Alert.alert(
+        t("paywall.restore_none_title"),
+        t("paywall.restore_none_desc"),
+      );
+    }
   };
 
   const rules = [
@@ -266,6 +299,26 @@ export default function WelcomeScreen() {
             </CardContent>
           </Card>
         </Animated.View>
+
+        {/* Stores require restoring a purchase to be reachable without first
+            hitting a paywall — a returning subscriber must not have to spend
+            attempts to get their access back. */}
+        {!isPremium && (
+          <Pressable
+            onPress={handleRestore}
+            disabled={restoring}
+            className="items-center"
+            style={{ paddingVertical: 8 }}
+          >
+            {restoring ? (
+              <ActivityIndicator color="#6b7280" />
+            ) : (
+              <Text className="text-gray-500" style={{ fontSize: fs(13) }}>
+                {t("paywall.restore")}
+              </Text>
+            )}
+          </Pressable>
+        )}
       </ScrollView>
 
       <Paywall

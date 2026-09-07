@@ -34,7 +34,9 @@ export default function QuizScreen() {
     consumeAttempt()
       .then((ok) => {
         if (ok) setAllowed(true);
-        else router.replace("/");
+        // Hand the reason back so home explains the bounce with the paywall
+        // instead of silently returning the user to the start.
+        else router.replace({ pathname: "/", params: { paywall: "daily_limit" } });
       })
       .catch(() => setAllowed(true));
   }, [ready, isPremium]);
