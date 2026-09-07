@@ -44,14 +44,25 @@ address is PIN-verified by mail. Start this early; the PIN letter takes weeks.
 
 ## 4. Wire the ids into the app
 
-**App IDs** go in `app.json`:
+**App IDs** are props on the config plugin in `app.json` — they belong in the
+`plugins` array, not in `extra`, or the plugin silently skips them and the
+native SDK crashes on startup:
 
 ```json
-"react-native-google-mobile-ads": {
-  "androidAppId": "ca-app-pub-XXXXXXXX~YYYYYYYY",
-  "iosAppId": "ca-app-pub-XXXXXXXX~YYYYYYYY"
-}
+"plugins": [
+  [
+    "react-native-google-mobile-ads",
+    {
+      "androidAppId": "ca-app-pub-XXXXXXXX~YYYYYYYY",
+      "iosAppId": "ca-app-pub-XXXXXXXX~YYYYYYYY"
+    }
+  ]
+]
 ```
+
+To confirm a prebuild picked them up: `AndroidManifest.xml` should contain a
+`com.google.android.gms.ads.APPLICATION_ID` meta-data entry, and iOS
+`Info.plist` a `GADApplicationIdentifier` key.
 
 **Ad unit IDs** go in `src/lib/ads.ts`, in `PROD_INTERSTITIAL_UNIT_ID`:
 
@@ -68,6 +79,17 @@ builds is how accounts get flagged for invalid traffic — a strike there can
 disable the whole AdMob account, not just the unit.
 
 After changing `app.json`: `npx expo prebuild --clean`.
+
+On this machine `pod install` fails during prebuild with
+`Unicode Normalization not appropriate for ASCII-8BIT` unless the terminal is
+UTF-8. Android still generates correctly; only the iOS pods are skipped. Fix:
+
+```bash
+export LANG=en_US.UTF-8 LC_ALL=en_US.UTF-8
+npx expo prebuild --clean
+```
+
+Adding those exports to `~/.zshrc` makes it permanent.
 
 ## 5. Consent — required before launch
 

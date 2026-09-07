@@ -31,17 +31,19 @@
     "plugins": [
       "expo-router",
       "expo-localization",
-      "react-native-google-mobile-ads"
+      [
+        "react-native-google-mobile-ads",
+        {
+          "_comment": "Google's sample App IDs — replace with your own from the AdMob console before shipping. See ADS_SETUP.md.",
+          "androidAppId": "ca-app-pub-3940256099942544~3347511713",
+          "iosAppId": "ca-app-pub-3940256099942544~1458002511"
+        }
+      ]
     ],
     "extra": {
       "_comment": "Test Store keys — replace with the real goog_/appl_ keys before shipping. See PREMIUM_SETUP.md.",
       "revenuecatAndroidKey": "test_jaSETbQLYsxXTHrPzbcsNrjOEOP",
       "revenuecatIosKey": "test_jaSETbQLYsxXTHrPzbcsNrjOEOP"
-    },
-    "react-native-google-mobile-ads": {
-      "_comment": "Google's sample App IDs — replace with your own from the AdMob console before shipping. See ADS_SETUP.md.",
-      "androidAppId": "ca-app-pub-3940256099942544~3347511713",
-      "iosAppId": "ca-app-pub-3940256099942544~1458002511"
     }
   }
 }
