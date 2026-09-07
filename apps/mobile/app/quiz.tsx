@@ -9,6 +9,7 @@ import { QuestionCard } from "../src/components/quiz/QuestionCard";
 import { ResultsScreen } from "../src/components/quiz/ResultsScreen";
 import { usePremium } from "../src/lib/premium";
 import { consumeAttempt } from "../src/lib/dailyAttempts";
+import { useInterstitial } from "../src/lib/ads";
 
 export default function QuizScreen() {
   const insets = useSafeAreaInsets();
@@ -46,6 +47,15 @@ export default function QuizScreen() {
     isStudyMode: false,
     studyBatchIds: [],
   });
+
+  // Preloads while the user is still answering so the ad is ready by the time
+  // results appear. Premium never loads one.
+  const showAds = allowed && !isPremium;
+  const { show: showInterstitial } = useInterstitial(showAds);
+
+  useEffect(() => {
+    if (showAds && quiz.phase === "results") showInterstitial();
+  }, [showAds, quiz.phase, showInterstitial]);
 
   const goHome = () => router.replace("/");
 
