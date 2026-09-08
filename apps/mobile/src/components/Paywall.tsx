@@ -31,6 +31,24 @@ export function Paywall({ visible, onClose, reason }: Props) {
   const annualPkg = offering?.annual ?? null;
   const monthlyPkg = offering?.monthly ?? null;
 
+  // The struck-through price has to be twelve months at the real monthly rate,
+  // read from the store — a hardcoded figure becomes a fabricated discount as
+  // soon as prices change, which both stores treat as a policy violation.
+  const annualComparisonPrice = (() => {
+    const monthly = monthlyPkg?.product;
+    if (!monthly || typeof monthly.price !== "number") return undefined;
+    const yearly = monthly.price * 12;
+    if (!annualPkg || yearly <= annualPkg.product.price) return undefined;
+    try {
+      return new Intl.NumberFormat(undefined, {
+        style: "currency",
+        currency: monthly.currencyCode,
+      }).format(yearly);
+    } catch {
+      return undefined;
+    }
+  })();
+
   const handlePurchase = async () => {
     const pkg: PurchasesPackage | null =
       selected === "annual" ? annualPkg : monthlyPkg;
@@ -144,7 +162,7 @@ export function Paywall({ visible, onClose, reason }: Props) {
               priceSuffix={t("paywall.per_year")}
               badge={t("paywall.best_value")}
               note={t("paywall.annual_note")}
-              originalPrice="$83.88"
+              originalPrice={annualComparisonPrice}
             />
             <PlanOption
               selected={selected === "monthly"}
