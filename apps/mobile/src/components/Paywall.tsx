@@ -7,6 +7,7 @@ import {
   ScrollView,
   ActivityIndicator,
   Alert,
+  Linking,
 } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useTranslation } from "react-i18next";
@@ -14,6 +15,11 @@ import { X, Check, Crown, Sparkles } from "lucide-react-native";
 import type { PurchasesPackage } from "react-native-purchases";
 import { fs, s } from "../lib/scale";
 import { usePremium, isRevenueCatConfigured } from "../lib/premium";
+
+const TERMS_URL =
+  "https://r1quelme.github.io/knowledge-test-driver-ca/terms.html";
+const PRIVACY_URL =
+  "https://r1quelme.github.io/knowledge-test-driver-ca/index.html";
 
 type Props = {
   visible: boolean;
@@ -214,9 +220,29 @@ export function Paywall({ visible, onClose, reason }: Props) {
             )}
           </Pressable>
 
-          <Text className="text-gray-400 text-center" style={{ fontSize: fs(11), lineHeight: fs(16) }}>
-            {t("paywall.legal")}
-          </Text>
+          <View style={{ gap: 6 }}>
+            <Text className="text-gray-400 text-center" style={{ fontSize: fs(11), lineHeight: fs(16) }}>
+              {t("paywall.legal")}
+            </Text>
+            {/* Stores expect the subscription terms to be reachable from the
+                point of purchase, not only from the store listing. */}
+            <View className="flex-row justify-center" style={{ gap: 16 }}>
+              <Text
+                onPress={() => Linking.openURL(TERMS_URL)}
+                className="text-gray-500 underline"
+                style={{ fontSize: fs(11) }}
+              >
+                {t("paywall.terms_link")}
+              </Text>
+              <Text
+                onPress={() => Linking.openURL(PRIVACY_URL)}
+                className="text-gray-500 underline"
+                style={{ fontSize: fs(11) }}
+              >
+                {t("paywall.privacy_link")}
+              </Text>
+            </View>
+          </View>
 
           {!configured && (
             <Text className="text-amber-700 text-center" style={{ fontSize: fs(12) }}>

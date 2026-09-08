@@ -53,7 +53,9 @@
     "success_cta": "开始使用",
     "restore_ok_title": "购买已恢复",
     "restore_ok_desc": "您的高级版访问权限已恢复。",
-    "legal": "订阅会自动续订,直到取消。请在您的商店账户中管理。订阅即表示您接受相关条款。",
+    "legal": "订阅会自动续订，直到取消。请在您的商店账户中管理。",
+    "terms_link": "服务条款",
+    "privacy_link": "隐私政策",
     "dev_warning": "此版本未配置支付。"
   },
   "question": {

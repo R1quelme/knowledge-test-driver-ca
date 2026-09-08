@@ -53,7 +53,9 @@
     "success_cta": "Let's go",
     "restore_ok_title": "Purchases restored",
     "restore_ok_desc": "Your Premium access has been restored.",
-    "legal": "Subscriptions auto-renew until canceled. Manage in your store account. By subscribing you accept the terms.",
+    "legal": "Subscriptions auto-renew until canceled. Manage in your store account.",
+    "terms_link": "Terms of Service",
+    "privacy_link": "Privacy Policy",
     "dev_warning": "Billing not configured in this build."
   },
   "question": {

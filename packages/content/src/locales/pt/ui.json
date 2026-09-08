@@ -53,7 +53,9 @@
     "success_cta": "Vamos lá",
     "restore_ok_title": "Compras restauradas",
     "restore_ok_desc": "Seu acesso Premium foi restaurado.",
-    "legal": "Assinaturas renovam automaticamente até serem canceladas. Gerencie na sua conta da loja. Ao assinar você aceita os termos.",
+    "legal": "Assinaturas renovam automaticamente até serem canceladas. Gerencie na sua conta da loja.",
+    "terms_link": "Termos de Uso",
+    "privacy_link": "Política de Privacidade",
     "dev_warning": "Pagamento não configurado nesta build."
   },
   "question": {
