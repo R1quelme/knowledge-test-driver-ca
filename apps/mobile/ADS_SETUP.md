@@ -91,20 +91,31 @@ npx expo prebuild --clean
 
 Adding those exports to `~/.zshrc` makes it permanent.
 
-## 5. Consent — required before launch
+## 5. Consent
 
-Not wired up yet, and **this is a shipping blocker in the EU and UK**:
+Wired up in `src/lib/ads.ts`, in this order:
 
-- **GDPR/UMP** — European users must be asked for consent before personalized
-  ads. `react-native-google-mobile-ads` ships Google's UMP SDK
-  (`AdsConsent.requestInfoUpdate` / `showForm`). Until then the code requests
-  non-personalized ads only (`requestNonPersonalizedAdsOnly: true`), which is
-  the conservative default but not a substitute for the consent form.
-- **iOS ATT** — App Store review rejects apps that track without the
-  App Tracking Transparency prompt. Needs `expo-tracking-transparency` and an
-  `NSUserTrackingUsageDescription` string in `app.json`.
+1. **GDPR/UMP** — `AdsConsent.gatherConsent()` shows Google's consent form when
+   the user's region requires one, and does nothing elsewhere; Google decides
+   from the device's location. No ad is requested unless it returns
+   `canRequestAds`, so a European user who refuses sees no ad request at all.
+2. **iOS ATT** — the system App Tracking Transparency prompt, via
+   `expo-tracking-transparency`. The explanation string lives in `app.json`
+   under the plugin's `userTrackingPermission`.
 
-Android-only launch can defer ATT, but not GDPR.
+UMP runs before ATT deliberately: its form explains why tracking is about to
+be requested, and iOS only ever shows the ATT prompt once, so a user who
+dismisses it with no context cannot be asked again.
+
+If the consent flow throws, `adsAllowed` stays false and no ads load. Failing
+closed is the point — an unconsented ad in the EU is a legal problem, a
+missing ad is lost revenue.
+
+**Still to verify before an EU launch:** the form has only been exercised
+outside the EEA, where UMP correctly does nothing. Use
+`AdsConsent.gatherConsent({ debugGeography, testDeviceIdentifiers })` to force
+the European form and confirm it renders, that refusing blocks ads, and that
+the privacy options entry point works.
 
 ## 6. Store listing
 

@@ -38,6 +38,12 @@
           "androidAppId": "ca-app-pub-3940256099942544~3347511713",
           "iosAppId": "ca-app-pub-3940256099942544~1458002511"
         }
+      ],
+      [
+        "expo-tracking-transparency",
+        {
+          "userTrackingPermission": "This lets us show ads that are relevant to you. Drive Test is free because of ads — you can remove them with Premium."
+        }
       ]
     ],
     "extra": {
