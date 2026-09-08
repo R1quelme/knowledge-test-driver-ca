@@ -112,6 +112,25 @@ Both stores ask whether the app contains ads — answer **yes** on the Play
 Console data safety form and the App Store privacy questionnaire. Getting this
 wrong is a takedown risk.
 
+## Why the library version is pinned
+
+`react-native-google-mobile-ads` is pinned to exactly **16.0.0** — no caret.
+The version has to land in a narrow window, and both sides fail at Gradle:
+
+| Version | AdMob SDK | Android build |
+|---|---|---|
+| 16.4.0+ | 25.4.0 | fails — compiled with Kotlin 2.3.0, Expo SDK 54 uses 2.1.0 |
+| **16.0.0** | **24.6.0** | **works** |
+| 15.4.0 | 24.3.0 | fails — `Unresolved reference 'currentActivity'` on RN 0.81 |
+
+`npx expo install` picks the newest release, which is 16.5.0 today: it checks
+compatibility with Expo itself but not the transitive Kotlin metadata, so it
+resolves to a version that cannot compile. iOS builds fine either way — this
+only breaks Android.
+
+Re-pin here if you ever upgrade the Expo SDK, since a newer SDK ships a newer
+Kotlin and the upper bound moves.
+
 ## What's already in the code
 
 - `src/lib/ads.ts` — `initAds()` plus `useInterstitial(enabled)`, which
