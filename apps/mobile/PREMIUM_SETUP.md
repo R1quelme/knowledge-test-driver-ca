@@ -85,6 +85,32 @@ Both keys are the **public SDK keys** from RevenueCat (Project → API keys).
 
 For local builds: `npx expo prebuild --clean && npx expo run:android`.
 
+## 6b. Store builds (EAS)
+
+`eas.json` defines three profiles:
+
+| Profile | Output | Use |
+|---|---|---|
+| `development` | APK, dev client | local development against Metro |
+| `preview` | APK | share a build without the dev client |
+| `production` | AAB | what Play Console and App Store accept |
+
+```bash
+npx eas-cli login          # needs a free Expo account
+npx eas-cli build --platform android --profile production
+```
+
+`appVersionSource: "remote"` with `autoIncrement` on the production profile
+means EAS tracks the build number for you — `app.json` keeps `version` as the
+human-facing "1.0.0" and never needs a `versionCode`. Bumping it by hand is
+the usual way a submission gets rejected for a duplicate build number.
+
+The first Android production build asks whether to generate a keystore. There
+is already one at `apps/mobile/drive-test.keystore`, which is gitignored and
+exists only on this machine — if you let EAS generate a new one instead, the
+app signature changes and Play will refuse the upload as a different app.
+Either upload the existing keystore or back it up before choosing.
+
 ## 7. Testing
 
 - **Android**: install the AAB from internal testing track on a real device signed in with a tester Google account. Purchases will work with test cards / no charge.
